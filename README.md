@@ -11,6 +11,7 @@
 
 DBS = [{'DB_HOST' : 'localhost', 'DB_USER' : 'USERNAME','DB_USER_PASSWORD':'PASSWORD','DB_NAME':'NAME' },
 {'DB_HOST' : 'localhost', 'DB_USER' : 'USERNAME','DB_USER_PASSWORD':'PASSWORD','DB_NAME':'NAME' }];
+
 只需要配置好多个数据库。然后把python加到 linux 或 windows 计划任务
 
 ###linux 计划任务使用方法。
@@ -18,8 +19,7 @@ DBS = [{'DB_HOST' : 'localhost', 'DB_USER' : 'USERNAME','DB_USER_PASSWORD':'PASS
 先ssh到主机
 
 1. 把py文件通过ftp到服务器:
-2. 输入
-3. sudo crontab -e
-4. 在后面加上每天凌晨2点允许
-5. 0 2 * * * /usr/bin/python dbbackup.py
+2. 输入sudo crontab -e
+3. 在后面加上每天凌晨2点运行
+4. 0 2 * * * /usr/bin/python dbbackup.py
 
