@@ -1,7 +1,11 @@
 # dbbackup-multiple
 ### 介绍
 
-自动备份mysql的python脚本。可以同时备份多个数据库。
+整合网上的教程。写了一个自动备份mysql的python脚本。
+
+### 功能
+1. 可以同时备份多个数据库。
+2. 可以设置保留最后几个备份，多出的删除。
 
 ### 使用
 
@@ -13,9 +17,9 @@ DBS = [{'DB_HOST' : 'localhost', 'DB_USER' : 'USERNAME','DB_USER_PASSWORD':'PASS
 
 先ssh到主机
 
-把py文件通过ftp到服务器:
-输入
-sudo crontab -e
-在后面加上每天凌晨2点允许
-0 2 * * * /usr/bin/python dbbackup.py
+1. 把py文件通过ftp到服务器:
+2. 输入
+3. sudo crontab -e
+4. 在后面加上每天凌晨2点允许
+5. 0 2 * * * /usr/bin/python dbbackup.py
 
